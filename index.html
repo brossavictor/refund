@@ -23,52 +23,54 @@
 
       <section>
         <form>
-          <h1>Solicitação de reembolso</h1>
+          <h1>Refund request</h1>
           <p>
-            Informe os dados da despesa para solicitar reembolso. A despesa será
-            analisada e reembolsada em até 30 dias.
+            Inform the expense data to request a refund. The expense will be
+            analyzed and refunded in up to 30 days.
           </p>
 
           <fieldset>
-            <legend>Nome da despesa</legend>
+            <legend>Expense</legend>
             <input type="text" id="expense" name="expense" required />
           </fieldset>
 
           <div class="inputs-row">
             <fieldset>
-              <legend>Categoria</legend>
+              <legend>Category</legend>
               <select id="category" name="category" required>
-                <option value="" disabled selected hidden>Selecione</option>
-                <option value="food">Alimentação</option>
-                <option value="accommodation">Hospedagem</option>
-                <option value="services">Serviços</option>
-                <option value="transport">Transporte</option>
-                <option value="others">Outros</option>
+                <option value="" disabled selected hidden>
+                  Choose an option
+                </option>
+                <option value="food">Food</option>
+                <option value="accommodation">Accommodation</option>
+                <option value="services">Services</option>
+                <option value="transport">Transport</option>
+                <option value="other">Other</option>
               </select>
             </fieldset>
 
             <fieldset>
-              <legend>Nome da despesa</legend>
+              <legend>Amount</legend>
               <input
                 type="text"
                 name="amount"
                 id="amount"
-                placeholder="0,00"
+                placeholder="CA$0.00"
                 required
               />
             </fieldset>
           </div>
 
-          <button type="submit">Adicionar despesa</button>
+          <button type="submit">Add expense</button>
         </form>
 
         <aside>
           <header>
             <p>
-              Minhas solicitações <i>&bullet;</i>
-              <span>0 despesas</span>
+              My requests <i>&bullet;</i>
+              <span>0 requests</span>
             </p>
-            <h2><small>R$</small>0,00</h2>
+            <h2><small>CA$</small>0,00</h2>
           </header>
 
           <ul>
@@ -76,8 +78,8 @@
               <img src="./img/food.svg" alt="Ícone de tipo da despesa" />
 
               <div class="expense-info">
-                <strong>Almoço</strong>
-                <span>Alimentação</span>
+                <strong>Lunch</strong>
+                <span>Food</span>
               </div>
 
               <span class="expense-amount"><small>R$</small>1.420,57</span>
@@ -88,5 +90,6 @@
         </aside>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
