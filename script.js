@@ -54,10 +54,21 @@ function addExpense(newExpense) {
     const expenseCategory = document.createElement("span");
     expenseCategory.textContent = newExpense.category_name;
 
+    const expenseAmount = document.createElement("span");
+    expenseAmount.classList.add("expense-amount");
+    expenseAmount.innerHTML = `<small>CA$</small>${newExpense.amount
+      .toUpperCase()
+      .replace("CA$", "")}`;
+
+    const removeIcon = document.createElement("img");
+    removeIcon.classList.add("remove-icon");
+    removeIcon.setAttribute("src", "img/remove.svg");
+    removeIcon.setAttribute("alt", "remove");
+
     expenseInfo.append(expenseName, expenseCategory);
-    expenseItem.append(expenseIcon, expenseInfo);
+    expenseItem.append(expenseIcon, expenseInfo, expenseAmount, removeIcon);
     expenseList.append(expenseItem);
   } catch (error) {
-    alert("Not possible.");
+    alert("Something went wrong.");
   }
 }
