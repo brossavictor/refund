@@ -14,7 +14,7 @@ enum UserRole {
 
 enum Category {
   food
-  accomodation
+  accommodation
   services
   transport
   other

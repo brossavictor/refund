@@ -1,9 +1,12 @@
+import * as dotenv from "dotenv";
 import { Request, Response } from "express";
 import { UserRole } from "@prisma/client";
 import { prisma } from "@/database/prisma";
 import { z } from "zod";
 import { hash } from "bcrypt";
 import { AppError } from "@/utils/AppError";
+
+dotenv.config();
 
 class UsersController {
   async create(request: Request, response: Response) {
