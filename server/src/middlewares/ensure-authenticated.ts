@@ -3,11 +3,6 @@ import { JwtPayload, verify } from "jsonwebtoken";
 import { authConfig } from "@/config/auth";
 import { AppError } from "@/utils/AppError";
 
-/* interface TokenPayload {
-  role: String;
-  sub: String;
-}
- */
 function ensureAuthenticated(
   request: Request,
   response: Response,

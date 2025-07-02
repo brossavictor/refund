@@ -10,7 +10,7 @@ const routes = Router();
 routes.use("/users", usersRoutes);
 routes.use("/sessions", sessionsRoutes);
 
-//private routs
+//private routes
 routes.use(ensureAuthenticated);
 routes.use("/refunds", refundsRoutes);
 
