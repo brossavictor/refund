@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { prisma } from "@/database/prisma";
 import { z } from "zod";
-import { Category } from "@prisma/client";
 import { AppError } from "@/utils/AppError";
 
 class RefundsController {
@@ -41,11 +40,17 @@ class RefundsController {
   async index(request: Request, response: Response) {
     const querySchema = z.object({
       name: z.string().optional().default(""),
+      page: z.coerce.number().optional().default(1),
+      perPage: z.coerce.number().optional().default(12),
     });
 
-    const { name } = querySchema.parse(request.query);
+    const { name, page, perPage } = querySchema.parse(request.query);
+
+    const skip = (page - 1) * perPage;
 
     const refunds = await prisma.refunds.findMany({
+      skip,
+      take: perPage,
       where: {
         user: {
           name: {
@@ -57,7 +62,43 @@ class RefundsController {
       include: { user: true },
     });
 
-    response.json(refunds);
+    const totalRecords = await prisma.refunds.count({
+      where: {
+        user: {
+          name: {
+            contains: name.trim(),
+          },
+        },
+      },
+    });
+
+    const totalPages = Math.ceil(totalRecords / perPage);
+
+    response.json({
+      refunds,
+      pagination: {
+        page,
+        perPage,
+        totalRecords,
+        totalPages: totalPages > 0 ? totalPages : 1,
+      },
+    });
+  }
+
+  async show(request: Request, response: Response) {
+    const paramsSchema = z.object({
+      id: z.string().uuid(),
+    });
+
+    const { id } = paramsSchema.parse(request.params);
+    const refund = await prisma.refunds.findFirst({
+      where: { id },
+      include: {
+        user: true,
+      },
+    });
+
+    response.json(refund);
   }
 }
 
