@@ -1,0 +1,46 @@
+fieldset {
+  border-style: none;
+  display: flex;
+  flex: 1;
+  max-height: calc(var(--spacing) * 20);
+  color: var(--color-gray-200);
+}
+
+legend {
+  text-transform: uppercase;
+  font: var(--font-size-xxs);
+
+  margin-bottom: 0.25rem;
+}
+
+fieldset:focus-within,
+fieldset > input:focus-within::placeholder,
+legend:focus-within {
+  color: var(--color-green-100);
+}
+
+fieldset > input:focus-within::placeholder {
+  opacity: 40%;
+}
+
+input {
+  padding-inline: calc(var(--spacing) * 4);
+  width: 100%;
+  height: calc(var(--spacing) * 12);
+
+  border-style: solid;
+  border-radius: 0.5rem;
+
+  border-color: var(--color-gray-300);
+  background-color: transparent;
+  color: var(--color-gray-100);
+  font: var(--font-size-sm);
+
+  outline: none;
+}
+
+input:focus,
+input:focus-within,
+input:focus-visible {
+  border: 0.125rem solid var(--color-green-100);
+}

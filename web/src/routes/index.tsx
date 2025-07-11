@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router";
-import AuthRoutes from "./auth-routes";
+import { AuthRoutes } from "./auth-routes";
 
-export default function Routes() {
+export function Routes() {
   return (
     <BrowserRouter>
       <AuthRoutes />
