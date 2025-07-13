@@ -4,3 +4,24 @@ form {
   flex-direction: column;
   gap: calc(var(--spacing) * 4);
 }
+
+form a {
+  line-height: normal;
+  align-self: center;
+
+  text-decoration: none;
+  color: var(--color-gray-100);
+
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+
+  margin-top: calc(var(--spacing) * 10);
+  margin-bottom: calc(var(--spacing) * 4);
+
+  transition: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+form a:hover {
+  color: var(--color-green-800);
+}

@@ -5,20 +5,17 @@
 }
 
 :root {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  --font: "Open Sans", sans-serif;
 
-  --font-size-xxs: 0.625rem/calc(1/0.75) ;
-  --font-size-xs: 0.75rem/calc(1/0.75) ;
-  --font-size-sm: 0.875rem/calc(1.25/0.875)
-  --font-size-md: 1rem/calc(1.5/1) ;
-  --font-size-lg: 1.125rem/calc(1.75/1.125);
-  --font-size-xl: 1.25rem/calc(1.75/1.25) ;
-  --font-size-xxl: 1.5rem/calc(2/1.5) ;
-  --font-size-huge: 1.875rem/calc(2.25/1.875) ;
-  --font-size-supreme: 2.25rem/calc(2.5/2.25) ;
-
+  --font-size-xxs: 0.625rem/0.75rem;
+  --font-size-xs: 0.75rem/1rem;
+  --font-size-sm: 0.875rem/1.25rem;
+  --font-size-md: 1rem/1.5rem;
+  --font-size-lg: 1.125rem/1.75rem;
+  --font-size-xl: 1.25rem/1.75rem;
+  --font-size-xxl: 1.5rem/2rem;
+  --font-size-huge: 1.875rem/2.25rem;
+  --font-size-supreme: 2.25rem;
   --color-gray-100: #1f2523;
   --color-gray-200: #4d5c57;
   --color-gray-300: #cdd5d2;
@@ -27,9 +24,22 @@
 
   --color-green-100: #1f8459;
   --color-green-200: #2cb178;
+  --color-green-800: #016630;
 
   --color-white: #ffffff;
 
   --spacing: 0.25rem;
+
+  font-family: var(--font);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  color: var(--color-gray-100);
 }
 
+a {
+  transition: 0.3s;
+  transition-timing-function: ease-in;
+  text-decoration: none;
+}

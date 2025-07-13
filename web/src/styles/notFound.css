@@ -1,0 +1,20 @@
+.notFound {
+  font-size: var(--font-size-xxl);
+  font-weight: 600;
+}
+
+.notFound > h1 {
+  margin-bottom: calc(var(--spacing) * 10);
+}
+
+a {
+  font-weight: 600;
+  color: var(--color-green-100);
+
+  transition: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+a:hover {
+  color: var(--color-green-200);
+}
