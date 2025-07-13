@@ -1,0 +1,26 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: calc(var(--spacing) * 12);
+  border-radius: 0.5rem;
+
+  background-color: var(--color-green-100);
+  color: var(--color-white);
+
+  cursor: pointer;
+  transition: 0.3;
+  transition-timing-function: ease-in;
+}
+
+button:hover {
+  color: var(--color-green-200);
+}
+
+button:disabled,
+button:hover & button:disabled {
+  opacity: 50%;
+  cursor: progress;
+  color: var(--color-white);
+}
