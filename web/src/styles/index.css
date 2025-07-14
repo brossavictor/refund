@@ -1,6 +1,9 @@
 @import url(global.css);
-@import url(authLayout.css);
+@import url(layout.css);
 @import url(signIn.css);
 @import url(input.css);
 @import url(button.css);
 @import url(notFound.css);
+@import url(header.css);
+@import url(refund.css);
+@import url(upload.css);

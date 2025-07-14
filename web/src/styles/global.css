@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --font: "Open Sans", sans-serif;
 
@@ -16,6 +10,7 @@
   --font-size-xxl: 1.5rem/2rem;
   --font-size-huge: 1.875rem/2.25rem;
   --font-size-supreme: 2.25rem;
+
   --color-gray-100: #1f2523;
   --color-gray-200: #4d5c57;
   --color-gray-300: #cdd5d2;
@@ -38,8 +33,27 @@
   color: var(--color-gray-100);
 }
 
-a {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   transition: 0.3s;
   transition-timing-function: ease-in;
+}
+
+main {
+  background-color: var(--color-gray-400);
+  width: 100%;
+  height: 100vh;
+}
+
+a {
   text-decoration: none;
+}
+
+a,
+button,
+input,
+select {
+  cursor: pointer;
 }

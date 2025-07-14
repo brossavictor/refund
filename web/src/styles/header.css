@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  height: calc(var(--spacing) * 10);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header:first-child {
+  margin-block: calc(var(--spacing) * 8);
+}
+
+.header > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calc(var(--spacing) * 3);
+}
+
+.header span {
+  font: var(--font-size-sm);
+  color: var(--color-gray-200);
+  font-weight: 600;
+}
+
+.header div > img {
+  margin-block: calc(var(--spacing) * 8);
+}
+
+.header div > img:hover {
+  opacity: 60%;
+}

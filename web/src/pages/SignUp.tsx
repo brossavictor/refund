@@ -7,9 +7,8 @@ export function SingUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [isloading, setIsLoading] = useState("false");
-
-  function handleSubmit(e: React.FormEvent) {
+  /* const [isloading, setIsLoading] = useState("false"); */
+  function handleSubmit() {
     console.log({ name, email, password, confirmPassword });
   }
 

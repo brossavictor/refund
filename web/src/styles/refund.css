@@ -1,0 +1,34 @@
+@media (min-width: 64rem) {
+  .refund {
+    min-width: 32rem;
+  }
+}
+.refund {
+  background-color: var(--color-gray-500);
+  width: 100%;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--spacing) * 10);
+  gap: calc(var(--spacing) * 6);
+}
+
+.refund > h1 {
+  font: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-gray-100);
+}
+
+.refund > p {
+  font: var(--font-size-s);
+  font-weight: 700;
+  color: var(--color-gray-200);
+  margin-top: calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.refund div {
+  background-color: inherit;
+  flex-direction: row;
+  gap: calc(var(--spacing) * 4);
+}

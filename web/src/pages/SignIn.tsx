@@ -5,14 +5,14 @@ import { Input } from "../components/Input";
 export function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isloading, setIsLoading] = useState("false");
+  /* const [isloading, setIsLoading] = useState("false"); */
 
-  function handleSubmit(e: React.FormEvent) {
-    console.log({ email, password, isloading });
+  function handleSubmit() {
+    console.log({ email, password /* , isloading */ });
   }
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form className="signIn" onSubmit={(e) => e.preventDefault()}>
       <Input
         required
         legend="E-mail"

@@ -1,0 +1,74 @@
+.upload {
+  display: flex;
+  flex-direction: column !important;
+
+  border-radius: 0.5rem;
+  border-color: var(--color-gray-300);
+  font: var(--font-size-sm);
+  background-color: transparent;
+  outline: none;
+  justify-content: space-between;
+}
+
+.upload legend {
+  margin-right: auto;
+}
+
+.upload > div {
+  width: 100%;
+  height: calc(var(--spacing) * 12);
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  border: solid;
+  border-color: var(--color-gray-300);
+  font: var(--font-size-sm);
+
+  outline: none;
+  background-color: transparent;
+}
+
+.upload > div:focus,
+.upload > div:focus-visible,
+.upload > div:focus-within,
+.upload > div:hover {
+  color: var(--color-green-100);
+  border-color: var(--color-green-100);
+  border: 0.125rem solid var(--color-green-100);
+}
+
+.upload > div > span {
+  flex: 1;
+  font: var(--font-size-xs);
+  padding-left: calc(var(--spacing) * 4);
+}
+
+.upload > div > label {
+  display: flex;
+  justify-content: center;
+  height: calc(var(--spacing) * 12);
+  padding-inline: calc(var(--spacing) * 4);
+  align-items: center;
+  background-color: var(--color-green-100);
+  border-radius: 0.5rem;
+  font: var(--color-white);
+}
+
+.upload > div > label:hover:not(:disabled) {
+  background-color: var(--color-green-200);
+}
+
+.upload > div > label:disabled {
+  opacity: 60%;
+}
+
+.upload > div > input {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+}
+
+.upload img {
+  width: calc(var(--spacing) * 6);
+  height: calc(var(--spacing) * 6);
+}

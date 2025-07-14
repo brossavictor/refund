@@ -10,10 +10,6 @@ button {
 
   background-color: var(--color-green-100);
   color: var(--color-white);
-
-  cursor: pointer;
-  transition: 0.3s;
-  transition-timing-function: ease-in;
 }
 
 button:hover {

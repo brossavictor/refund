@@ -4,7 +4,7 @@ import logoSvg from "../assets/logo.svg";
 export function AuthLayout() {
   return (
     <div>
-      <main>
+      <main className="authLayout">
         <img src={logoSvg} alt="Logo" />
         <Outlet />
       </main>

@@ -7,11 +7,11 @@
   margin-bottom: calc(var(--spacing) * 10);
 }
 
-a {
+.notFound a {
   font-weight: 600;
   color: var(--color-green-100);
 }
 
-a:hover {
+.notFound a:hover {
   color: var(--color-green-200);
 }
