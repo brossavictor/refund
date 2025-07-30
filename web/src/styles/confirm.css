@@ -1,0 +1,36 @@
+.confirm {
+  width: 100%;
+  margin-inline: auto;
+  background-color: var(--color-gray-500);
+  gap: 2rem;
+  padding: calc(var(--spacing) * 8);
+}
+
+.confirm,
+.confirm a {
+  border-radius: 0.5rem;
+}
+
+.confirm img {
+  width: 16rem;
+  height: 16rem;
+}
+
+.confirm p {
+  font: var(--font-text-sm);
+  align-items: center;
+}
+
+.confirm a {
+  color: var(--color-white);
+  padding: calc(var(--spacing) * 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-green-100);
+}
+
+.confirm a:hover {
+  background-color: var(--color-green-200);
+}
