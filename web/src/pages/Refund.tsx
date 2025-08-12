@@ -13,7 +13,7 @@ export function Refund() {
   const [category, setCategory] = useState("Select...");
   const [price, setPrice] = useState(0);
   const [filename, setFilename] = useState<File | null>(null);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -68,7 +68,7 @@ export function Refund() {
         placeholder=""
         onChange={(e) => e.target.files && setFilename(e?.target.files[0])}
       />
-      <Button type="submit" isLoading={loading}>
+      <Button type="submit" isLoading={false}>
         Send
       </Button>
     </form>

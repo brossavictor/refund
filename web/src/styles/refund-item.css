@@ -1,0 +1,44 @@
+.refund-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.refund-item > img {
+  flex-grow: 0;
+}
+
+.refund-item > div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+
+  background-color: var(--color-gray-500);
+}
+
+.refund-item > div > * {
+  margin-right: auto;
+}
+
+.refund-item > div > strong {
+  font-size: var(--font-size-sm);
+}
+
+.refund-item > div > span {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-200);
+}
+
+.amount {
+  margin-left: auto;
+
+  font-weight: 600;
+}
+
+.amount::first-letter {
+  font-weight: 400;
+  color: var(--color-gray-200);
+}
