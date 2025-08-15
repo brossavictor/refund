@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--spacing) * 4);
+
+  background-color: var(--color-gray-500);
+}
+
+.pagination > Button {
+  border-style: none;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.pagination > Button:hover {
+  background-color: var(--color-green-200);
+}
+
+.pagination > span {
+  font: var(--font-size-sm);
+  color: var(--color-gray-200);
+}
+
+.hover {
+  color: var(--color-gray-200);
+}

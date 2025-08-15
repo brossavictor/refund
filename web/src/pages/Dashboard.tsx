@@ -4,12 +4,28 @@ import { Button } from "../components/Button";
 import search from "../assets/search.svg";
 import { RefundItem } from "../components/RefundItem";
 import { CATEGORIES } from "../utils/categories";
+import { Pagination } from "../components/Pagination";
 
 export function Dashboard() {
   const [name, setName] = useState("");
   function fetchRefunds(e: React.FormEvent) {
     e.preventDefault();
     console.log(name);
+  }
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(10);
+
+  function handlePagination(action: "next" | "previous") {
+    setPage((prevPage) => {
+      if (action === "next" && prevPage < totalPages) {
+        return prevPage + 1;
+      }
+      if (action === "previous" && prevPage > 1) {
+        return prevPage - 1;
+      }
+
+      return prevPage;
+    });
   }
 
   return (
@@ -35,6 +51,13 @@ export function Dashboard() {
           categoryImg: CATEGORIES["transport"].icon,
         }}
       ></RefundItem>
+
+      <Pagination
+        current={page}
+        total={totalPages}
+        onNext={() => handlePagination("next")}
+        onPrevious={() => handlePagination("previous")}
+      />
     </div>
   );
 }

@@ -5,10 +5,10 @@ import { Input } from "../components/Input";
 export function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  /* const [isloading, setIsLoading] = useState("false"); */
+  const [loading, setLoading] = useState(false);
 
   function handleSubmit() {
-    console.log({ email, password /* , isloading */ });
+    console.log({ email, password /* , loading */ });
   }
 
   return (
@@ -28,7 +28,7 @@ export function SignIn() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <Button type="submit" onClick={handleSubmit}>
+      <Button type="submit" onClick={handleSubmit} disabled={loading}>
         Sign In
       </Button>
 

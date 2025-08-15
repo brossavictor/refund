@@ -19,6 +19,5 @@ button:hover {
 button:disabled,
 button:hover & button:disabled {
   opacity: 50%;
-  cursor: progress;
   color: var(--color-white);
 }

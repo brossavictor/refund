@@ -21,3 +21,7 @@
 .signIn a:hover {
   color: var(--color-green-800);
 }
+
+.signIn > Button:disabled {
+  cursor: progress;
+}
