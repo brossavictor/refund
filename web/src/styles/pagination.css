@@ -4,6 +4,7 @@
   gap: calc(var(--spacing) * 4);
 
   background-color: var(--color-gray-500);
+  margin-block: calc(var(--spacing) * 6);
 }
 
 .pagination > Button {
@@ -22,5 +23,5 @@
 }
 
 .hover {
-  color: var(--color-gray-200);
+  color: var(--color-green-200) !important;
 }

@@ -1,4 +1,4 @@
-type RefundItemProps = React.ComponentProps<"a"> & {
+export type RefundItemProps = React.ComponentProps<"a"> & {
   data: {
     id: string;
     name: string;
