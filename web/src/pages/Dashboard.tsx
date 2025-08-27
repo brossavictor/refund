@@ -55,7 +55,11 @@ export function Dashboard() {
       </form>
       <>
         {refunds.map((item) => (
-          <RefundItem key={item.id} {...item} href={`/refund/${item.id}`} />
+          <RefundItem
+            key={item.data.id}
+            {...item}
+            href={`/refund/${item.data.id}`}
+          />
         ))}
       </>
 

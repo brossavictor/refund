@@ -2,7 +2,7 @@
   background-color: var(--color-gray-500);
   border-radius: 1rem;
   padding: calc(var(--spacing) * 10);
-  gap: calc(var(--spacing) * 4);
+  gap: calc(var(--spacing) * 12);
 }
 .dashboard > h1 {
   margin-right: auto;

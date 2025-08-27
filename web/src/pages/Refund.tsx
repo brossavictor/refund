@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
+import fileSvg from "../assets/file.svg";
 import { CATEGORIES, CATEGORIES_KEYS } from "../utils/categories";
 
 import { Input } from "../components/Input";
@@ -16,10 +17,15 @@ export function Refund() {
   // const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+  const params = useParams<{ id: string }>();
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log({ name, category, price, filename });
+
+    if (params.id) {
+      return navigate(-1);
+    }
+
     navigate("/confirm", { state: { fromSubmit: true } });
   }
 
@@ -36,6 +42,7 @@ export function Refund() {
         placeholder="Name of expenditure"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        disabled={!!params.id}
       />
 
       <div>
@@ -44,6 +51,7 @@ export function Refund() {
           legend="Category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
+          disabled={!!params.id}
         >
           {CATEGORIES_KEYS.map((category, index) => (
             <option key={index} value={category}>
@@ -61,15 +69,26 @@ export function Refund() {
             currency: "CAD",
           })}
           onChange={(e) => setPrice(Number(e.target.value.replace(/\D/g, "")))}
+          disabled={!!params.id}
         />
       </div>
-      <Upload
-        filename={filename && filename.name}
-        placeholder=""
-        onChange={(e) => e.target.files && setFilename(e?.target.files[0])}
-      />
+
+      {params.id ? (
+        <a href="google.com" target="_blank">
+          <img src={fileSvg} alt="file icon" />
+          Open receipt
+        </a>
+      ) : (
+        <Upload
+          filename={filename && filename.name}
+          placeholder=""
+          onChange={(e) => e.target.files && setFilename(e?.target.files[0])}
+          disabled={!!params.id}
+        />
+      )}
+
       <Button type="submit" isLoading={false}>
-        Send
+        {params.id ? "Return" : "Send"}
       </Button>
     </form>
   );
