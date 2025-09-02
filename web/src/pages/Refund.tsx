@@ -74,7 +74,11 @@ export function Refund() {
       </div>
 
       {params.id ? (
-        <a href="google.com" target="_blank">
+        <a
+          className="upload-file"
+          href="https://www.facebook.com/"
+          target="_blank"
+        >
           <img src={fileSvg} alt="file icon" />
           Open receipt
         </a>

@@ -26,3 +26,19 @@
   flex-direction: row;
   gap: calc(var(--spacing) * 4);
 }
+
+.upload-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: calc(var(--spacing) * 2);
+  margin-inline: calc(var(--spacing) * 6);
+
+  color: var(--color-green-100);
+  font-weight: 600;
+}
+
+.upload-file:hover {
+  opacity: 50%;
+}
